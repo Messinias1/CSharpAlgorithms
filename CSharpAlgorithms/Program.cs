@@ -60,12 +60,37 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+            var input = Convert.ToInt32(Console.ReadLine());
 
-            for (var i = 1; i < 11; i++)
+            for (var i = 0; i < input; i++)
             {
-                Console.WriteLine("{0} x {1} = {2}", n, i, n * i);
+                var S = Console.ReadLine();
+
+                for (var j = 0; j < S.Length; j++)
+                {
+                    if (j % 2 == 0)
+                    {
+                        Console.Write(S[j]);
+                    }
+                }
+                Console.Write(" ");
+                for (var j = 0; j < S.Length; j++)
+                {
+                    if (j % 2 != 0)
+                    {
+                        Console.Write(S[j]);
+                    }
+                }
+                Console.WriteLine(" ");
             }
+
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //for (var i = 1; i < 11; i++)
+            //{
+            //    Console.WriteLine("{0} x {1} = {2}", n, i, n * i);
+            //}
 
             //int T = int.Parse(Console.In.ReadLine());
             //for (int i = 0; i < T; i++)
