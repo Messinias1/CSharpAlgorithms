@@ -60,30 +60,40 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
-            var input = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            for (var i = 0; i < input; i++)
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+            ;
+            Array.Reverse(arr);
+            foreach (var el in arr)
             {
-                var S = Console.ReadLine();
-
-                for (var j = 0; j < S.Length; j++)
-                {
-                    if (j % 2 == 0)
-                    {
-                        Console.Write(S[j]);
-                    }
-                }
-                Console.Write(" ");
-                for (var j = 0; j < S.Length; j++)
-                {
-                    if (j % 2 != 0)
-                    {
-                        Console.Write(S[j]);
-                    }
-                }
-                Console.WriteLine(" ");
+                Console.Write(el + " ");
             }
+
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+            //var input = Convert.ToInt32(Console.ReadLine());
+
+            //for (var i = 0; i < input; i++)
+            //{
+            //    var S = Console.ReadLine();
+
+            //    for (var j = 0; j < S.Length; j++)
+            //    {
+            //        if (j % 2 == 0)
+            //        {
+            //            Console.Write(S[j]);
+            //        }
+            //    }
+            //    Console.Write(" ");
+            //    for (var j = 0; j < S.Length; j++)
+            //    {
+            //        if (j % 2 != 0)
+            //        {
+            //            Console.Write(S[j]);
+            //        }
+            //    }
+            //    Console.WriteLine(" ");
+            //}
 
             //int n = Convert.ToInt32(Console.ReadLine());
 
