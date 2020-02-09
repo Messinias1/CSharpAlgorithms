@@ -70,30 +70,49 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            var input = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine(n);
+            string binary = Convert.ToString(n, 2);
+            // Console.WriteLine(binary);
+            // Console.WriteLine(binary.IndexOf("1"));
 
-            Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
-
-            for (var i = 0; i < input; i++)
+            var count = 0;
+            for (var i = 0; i < binary.Length; i++)
             {
-                var split = Console.ReadLine().Split(' ');
-                var names = split[0];
-                var numbers = Convert.ToInt32(split[1]);
-
-                PhoneBook.Add(names, numbers);
-            }
-            for (var j = 0; j < input; j++)
-            {
-                var contents = Console.ReadLine();
-
-                if (PhoneBook.ContainsKey(contents))
+                if (binary[i] == '1')
                 {
-                    Console.WriteLine("{0}={1}", contents, PhoneBook[contents]);
+                    count++;
+
                 }
                 else
-                    Console.WriteLine("Not found");
+                    break;
             }
-        }
+            Console.WriteLine(count);
+
+        //var input = Convert.ToInt32(Console.ReadLine());
+
+        //Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
+
+        //for (var i = 0; i < input; i++)
+        //{
+        //    var split = Console.ReadLine().Split(' ');
+        //    var names = split[0];
+        //    var numbers = Convert.ToInt32(split[1]);
+
+        //    PhoneBook.Add(names, numbers);
+        //}
+        //for (var j = 0; j < input; j++)
+        //{
+        //    var contents = Console.ReadLine();
+
+        //    if (PhoneBook.ContainsKey(contents))
+        //    {
+        //        Console.WriteLine("{0}={1}", contents, PhoneBook[contents]);
+        //    }
+        //    else
+        //        Console.WriteLine("Not found");
+        //}
+    }
 
         //int n = Convert.ToInt32(Console.ReadLine());
 
@@ -199,6 +218,6 @@ namespace CSharpAlgorithms
         //// Concatenate and print the String variables on a new line
         //// The 's' variable above should be printed first.
         //Console.WriteLine(s + s2);
-    }
+    
     
 }
