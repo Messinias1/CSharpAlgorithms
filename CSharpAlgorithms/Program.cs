@@ -60,79 +60,104 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
+            var input = Convert.ToInt32(Console.ReadLine());
 
-            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-            ;
-            Array.Reverse(arr);
-            foreach (var el in arr)
+            Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
+
+            for (var i = 0; i < input; i++)
             {
-                Console.Write(el + " ");
+                var split = Console.ReadLine().Split(' ');
+                var names = split[0];
+                var numbers = Convert.ToInt32(split[1]);
+
+                PhoneBook.Add(names, numbers);
             }
+            for (var j = 0; j < input; j++)
+            {
+                var contents = Console.ReadLine();
 
-            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
-            //var input = Convert.ToInt32(Console.ReadLine());
-
-            //for (var i = 0; i < input; i++)
-            //{
-            //    var S = Console.ReadLine();
-
-            //    for (var j = 0; j < S.Length; j++)
-            //    {
-            //        if (j % 2 == 0)
-            //        {
-            //            Console.Write(S[j]);
-            //        }
-            //    }
-            //    Console.Write(" ");
-            //    for (var j = 0; j < S.Length; j++)
-            //    {
-            //        if (j % 2 != 0)
-            //        {
-            //            Console.Write(S[j]);
-            //        }
-            //    }
-            //    Console.WriteLine(" ");
-            //}
-
-            //int n = Convert.ToInt32(Console.ReadLine());
-
-            //for (var i = 1; i < 11; i++)
-            //{
-            //    Console.WriteLine("{0} x {1} = {2}", n, i, n * i);
-            //}
-
-            //int T = int.Parse(Console.In.ReadLine());
-            //for (int i = 0; i < T; i++)
-            //{
-            //    int age = int.Parse(Console.In.ReadLine());
-            //    Person p = new Person(age);
-            //    p.amIOld();
-            //    for (int j = 0; j < 3; j++)
-            //    {
-            //        p.yearPasses();
-            //    }
-            //    p.amIOld();
-            //    Console.WriteLine();
-            //}
-
-            //int N = Convert.ToInt32(Console.ReadLine());
-            //if (N % 2 != 0)
-            //{
-            //    Console.WriteLine("Weird");
-            //}
-            //else if (N % 2 == 0 && N >= 2 && N <= 5)
-            //{
-            //    Console.WriteLine("Not Weird");
-            //}
-            //else if (N % 2 == 0 && N >= 6 && N <= 20)
-            //{
-            //    Console.WriteLine("Weird");
-            //}
-            //else if (N % 2 == 0 && N > 20)
-            //{
-            //    Console.WriteLine("Not Weird");
+                if (PhoneBook.ContainsKey(contents))
+                {
+                    Console.WriteLine("{0}={1}", contents, PhoneBook[contents]);
+                }
+                else
+                    Console.WriteLine("Not found");
+            }
         }
+
+        //int n = Convert.ToInt32(Console.ReadLine());
+
+        //int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+        //;
+        //Array.Reverse(arr);
+        //foreach (var el in arr)
+        //{
+        //    Console.Write(el + " ");
+        //}
+
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        //var input = Convert.ToInt32(Console.ReadLine());
+
+        //for (var i = 0; i < input; i++)
+        //{
+        //    var S = Console.ReadLine();
+
+        //    for (var j = 0; j < S.Length; j++)
+        //    {
+        //        if (j % 2 == 0)
+        //        {
+        //            Console.Write(S[j]);
+        //        }
+        //    }
+        //    Console.Write(" ");
+        //    for (var j = 0; j < S.Length; j++)
+        //    {
+        //        if (j % 2 != 0)
+        //        {
+        //            Console.Write(S[j]);
+        //        }
+        //    }
+        //    Console.WriteLine(" ");
+        //}
+
+        //int n = Convert.ToInt32(Console.ReadLine());
+
+        //for (var i = 1; i < 11; i++)
+        //{
+        //    Console.WriteLine("{0} x {1} = {2}", n, i, n * i);
+        //}
+
+        //int T = int.Parse(Console.In.ReadLine());
+        //for (int i = 0; i < T; i++)
+        //{
+        //    int age = int.Parse(Console.In.ReadLine());
+        //    Person p = new Person(age);
+        //    p.amIOld();
+        //    for (int j = 0; j < 3; j++)
+        //    {
+        //        p.yearPasses();
+        //    }
+        //    p.amIOld();
+        //    Console.WriteLine();
+        //}
+
+        //int N = Convert.ToInt32(Console.ReadLine());
+        //if (N % 2 != 0)
+        //{
+        //    Console.WriteLine("Weird");
+        //}
+        //else if (N % 2 == 0 && N >= 2 && N <= 5)
+        //{
+        //    Console.WriteLine("Not Weird");
+        //}
+        //else if (N % 2 == 0 && N >= 6 && N <= 20)
+        //{
+        //    Console.WriteLine("Weird");
+        //}
+        //else if (N % 2 == 0 && N > 20)
+        //{
+        //    Console.WriteLine("Not Weird");
+    }
         
 
         //double meal_cost = Convert.ToDouble(Console.ReadLine());
