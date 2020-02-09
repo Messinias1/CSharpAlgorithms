@@ -58,6 +58,16 @@ namespace CSharpAlgorithms
         //    Console.WriteLine(Math.Round(totalCost));
 
         //}
+        // Complete the factorial function below.
+        //static int factorial(int n)
+        //{
+        //    if (n <= 1)
+        //        return 1;
+        //    else
+        //        return n * factorial(n - 1);
+
+        //    Console.WriteLine(n);
+        //}
         static void Main(string[] args)
         {
             var input = Convert.ToInt32(Console.ReadLine());
