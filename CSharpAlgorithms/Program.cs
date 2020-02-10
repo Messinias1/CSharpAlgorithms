@@ -70,49 +70,82 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-            // Console.WriteLine(n);
-            string binary = Convert.ToString(n, 2);
-            // Console.WriteLine(binary);
-            // Console.WriteLine(binary.IndexOf("1"));
+            int[][] arr = new int[6][];
 
-            var count = 0;
-            for (var i = 0; i < binary.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (binary[i] == '1')
+                arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                for (int j = 0; j < arr.Length; j++)
                 {
-                    count++;
 
                 }
-                else
-                    break;
             }
-            Console.WriteLine(count);
+            List<int> totalList = new List<int>();
 
-        //var input = Convert.ToInt32(Console.ReadLine());
+            for (var i = 0; i < arr.Length - 2; i++)
+            {
+                // Console.WriteLine(arr[i][2]);
+                for (var j = 0; j < arr.Length - 2; j++)
+                {
+                    // Console.WriteLine("This is J: " + arr[i][j]);
+                    var topRow = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+                    // Console.WriteLine("top : " + topRow);
+                    var middle = arr[i + 1][j + 1];
+                    // Console.WriteLine("Middle : " + middle);
+                    var bottomRow = arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                    // Console.WriteLine("bottom : " + bottomRow);
 
-        //Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
+                    var total = topRow + middle + bottomRow;
+                    // Console.WriteLine("total: " + total);
+                    totalList.Add(total);
+                }
+            }
+            // Console.WriteLine(totalList.Count);
+            int max = totalList.Max();
+            Console.WriteLine(max);
 
-        //for (var i = 0; i < input; i++)
-        //{
-        //    var split = Console.ReadLine().Split(' ');
-        //    var names = split[0];
-        //    var numbers = Convert.ToInt32(split[1]);
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //// Console.WriteLine(n);
+            //string binary = Convert.ToString(n, 2);
+            //// Console.WriteLine(binary);
+            //// Console.WriteLine(binary.IndexOf("1"));
 
-        //    PhoneBook.Add(names, numbers);
-        //}
-        //for (var j = 0; j < input; j++)
-        //{
-        //    var contents = Console.ReadLine();
+            //var count = 0;
+            //for (var i = 0; i < binary.Length; i++)
+            //{
+            //    if (binary[i] == '1')
+            //    {
+            //        count++;
+            //    }
+            //    else
+            //        break;
+            //}
+            //Console.WriteLine(count);
 
-        //    if (PhoneBook.ContainsKey(contents))
-        //    {
-        //        Console.WriteLine("{0}={1}", contents, PhoneBook[contents]);
-        //    }
-        //    else
-        //        Console.WriteLine("Not found");
-        //}
-    }
+            //var input = Convert.ToInt32(Console.ReadLine());
+
+            //Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
+
+            //for (var i = 0; i < input; i++)
+            //{
+            //    var split = Console.ReadLine().Split(' ');
+            //    var names = split[0];
+            //    var numbers = Convert.ToInt32(split[1]);
+
+            //    PhoneBook.Add(names, numbers);
+            //}
+            //for (var j = 0; j < input; j++)
+            //{
+            //    var contents = Console.ReadLine();
+
+            //    if (PhoneBook.ContainsKey(contents))
+            //    {
+            //        Console.WriteLine("{0}={1}", contents, PhoneBook[contents]);
+            //    }
+            //    else
+            //        Console.WriteLine("Not found");
+            //}
+        }
 
         //int n = Convert.ToInt32(Console.ReadLine());
 
