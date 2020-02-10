@@ -14,6 +14,53 @@ using System;
 
 namespace CSharpAlgorithms
 {
+    class Student : Person
+    {
+        private int[] testScores;
+
+        /*	
+        *   Class Constructor
+        *   
+        *   Parameters: 
+        *   firstName - A string denoting the Person's first name.
+        *   lastName - A string denoting the Person's last name.
+        *   id - An integer denoting the Person's ID number.
+        *   scores - An array of integers denoting the Person's test scores.
+        */
+        // Write your constructor here
+        public Student(string firstName, string lastName, int identification, int[] scores)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.id = identification;
+            this.testScores = scores;
+        }
+        /*	
+        *   Method Name: Calculate
+        *   Return: A character denoting the grade.
+        */
+        // Write your method here
+        public char Calculate()
+        {
+            int sum = testScores.Sum();
+            var average = sum / testScores.Length;
+            // Console.WriteLine(average);
+            if (average >= 90)
+                return 'O';
+            else if (average >= 80 && average < 90)
+                return 'E';
+            else if (average >= 70 && average < 80)
+                return 'A';
+            else if (average >= 55 && average < 70)
+                return 'P';
+            else if (average >= 40 && average < 55)
+                return 'D';
+            else if (average < 40)
+                return 'T';
+            else return 'z';
+        }
+    }
+
     //class Person
     //{
     //    public int age;
@@ -45,7 +92,7 @@ namespace CSharpAlgorithms
     //        // Increment the age of the person in here
     //        age++;
     //    }
-        class Program
+    class Program
     {
         // Complete the solve function below.
         //static void solve(double meal_cost, int tip_percent, int tax_percent)
@@ -70,39 +117,39 @@ namespace CSharpAlgorithms
         //}
         static void Main(string[] args)
         {
-            int[][] arr = new int[6][];
+            //int[][] arr = new int[6][];
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-                for (int j = 0; j < arr.Length; j++)
-                {
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
 
-                }
-            }
-            List<int> totalList = new List<int>();
+            //    }
+            //}
+            //List<int> totalList = new List<int>();
 
-            for (var i = 0; i < arr.Length - 2; i++)
-            {
-                // Console.WriteLine(arr[i][2]);
-                for (var j = 0; j < arr.Length - 2; j++)
-                {
-                    // Console.WriteLine("This is J: " + arr[i][j]);
-                    var topRow = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
-                    // Console.WriteLine("top : " + topRow);
-                    var middle = arr[i + 1][j + 1];
-                    // Console.WriteLine("Middle : " + middle);
-                    var bottomRow = arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
-                    // Console.WriteLine("bottom : " + bottomRow);
+            //for (var i = 0; i < arr.Length - 2; i++)
+            //{
+            //    // Console.WriteLine(arr[i][2]);
+            //    for (var j = 0; j < arr.Length - 2; j++)
+            //    {
+            //        // Console.WriteLine("This is J: " + arr[i][j]);
+            //        var topRow = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+            //        // Console.WriteLine("top : " + topRow);
+            //        var middle = arr[i + 1][j + 1];
+            //        // Console.WriteLine("Middle : " + middle);
+            //        var bottomRow = arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+            //        // Console.WriteLine("bottom : " + bottomRow);
 
-                    var total = topRow + middle + bottomRow;
-                    // Console.WriteLine("total: " + total);
-                    totalList.Add(total);
-                }
-            }
-            // Console.WriteLine(totalList.Count);
-            int max = totalList.Max();
-            Console.WriteLine(max);
+            //        var total = topRow + middle + bottomRow;
+            //        // Console.WriteLine("total: " + total);
+            //        totalList.Add(total);
+            //    }
+            //}
+            //// Console.WriteLine(totalList.Count);
+            //int max = totalList.Max();
+            //Console.WriteLine(max);
 
             //int n = Convert.ToInt32(Console.ReadLine());
             //// Console.WriteLine(n);
