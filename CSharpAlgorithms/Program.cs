@@ -14,25 +14,27 @@ using System;
 
 namespace CSharpAlgorithms
 {
-    class MyBook : Book
-    {
-        public int price;
+    // day 14 scope added to own branch
 
-        public MyBook(string title, string author, int price)
-            : base(title, author)
-        {
-            this.title = title;
-            this.author = author;
-            this.price = price;
-        }
+    //class MyBook : Book
+    //{
+    //    public int price;
 
-        public override void display()
-        {
-            Console.WriteLine("Title: " + this.title);
-            Console.WriteLine("Author: " + this.author);
-            Console.WriteLine("Price: " + this.price);
-        }
-    }
+    //    public MyBook(string title, string author, int price)
+    //        : base(title, author)
+    //    {
+    //        this.title = title;
+    //        this.author = author;
+    //        this.price = price;
+    //    }
+
+    //    public override void display()
+    //    {
+    //        Console.WriteLine("Title: " + this.title);
+    //        Console.WriteLine("Author: " + this.author);
+    //        Console.WriteLine("Price: " + this.price);
+    //    }
+    //}
 
     //class Student : Person
     //{
