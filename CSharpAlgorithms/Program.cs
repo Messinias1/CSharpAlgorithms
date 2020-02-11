@@ -14,52 +14,72 @@ using System;
 
 namespace CSharpAlgorithms
 {
-    class Student : Person
+    class MyBook : Book
     {
-        private int[] testScores;
+        public int price;
 
-        /*	
-        *   Class Constructor
-        *   
-        *   Parameters: 
-        *   firstName - A string denoting the Person's first name.
-        *   lastName - A string denoting the Person's last name.
-        *   id - An integer denoting the Person's ID number.
-        *   scores - An array of integers denoting the Person's test scores.
-        */
-        // Write your constructor here
-        public Student(string firstName, string lastName, int identification, int[] scores)
+        public MyBook(string title, string author, int price)
+            : base(title, author)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.id = identification;
-            this.testScores = scores;
+            this.title = title;
+            this.author = author;
+            this.price = price;
         }
-        /*	
-        *   Method Name: Calculate
-        *   Return: A character denoting the grade.
-        */
-        // Write your method here
-        public char Calculate()
+
+        public override void display()
         {
-            int sum = testScores.Sum();
-            var average = sum / testScores.Length;
-            // Console.WriteLine(average);
-            if (average >= 90)
-                return 'O';
-            else if (average >= 80 && average < 90)
-                return 'E';
-            else if (average >= 70 && average < 80)
-                return 'A';
-            else if (average >= 55 && average < 70)
-                return 'P';
-            else if (average >= 40 && average < 55)
-                return 'D';
-            else if (average < 40)
-                return 'T';
-            else return 'z';
+            Console.WriteLine("Title: " + this.title);
+            Console.WriteLine("Author: " + this.author);
+            Console.WriteLine("Price: " + this.price);
         }
     }
+
+    //class Student : Person
+    //{
+    //    private int[] testScores;
+
+    //    /*	
+    //    *   Class Constructor
+    //    *   
+    //    *   Parameters: 
+    //    *   firstName - A string denoting the Person's first name.
+    //    *   lastName - A string denoting the Person's last name.
+    //    *   id - An integer denoting the Person's ID number.
+    //    *   scores - An array of integers denoting the Person's test scores.
+    //    */
+    //    // Write your constructor here
+    //    public Student(string firstName, string lastName, int identification, int[] scores)
+    //    {
+    //        this.firstName = firstName;
+    //        this.lastName = lastName;
+    //        this.id = identification;
+    //        this.testScores = scores;
+    //    }
+    //    /*	
+    //    *   Method Name: Calculate
+    //    *   Return: A character denoting the grade.
+    //    */
+    //    // Write your method here
+    //    public char Calculate()
+    //    {
+    //        int sum = testScores.Sum();
+    //        var average = sum / testScores.Length;
+    //        // Console.WriteLine(average);
+    //        if (average >= 90)
+    //            return 'O';
+    //        else if (average >= 80 && average < 90)
+    //            return 'E';
+    //        else if (average >= 70 && average < 80)
+    //            return 'A';
+    //        else if (average >= 55 && average < 70)
+    //            return 'P';
+    //        else if (average >= 40 && average < 55)
+    //            return 'D';
+    //        else if (average < 40)
+    //            return 'T';
+    //        else return 'z';
+    //    }
+    //}
 
     //class Person
     //{
