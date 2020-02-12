@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 19 interfaces
+
     // day 18 stack and queue 
 
     // day 17 ecpetion continued
