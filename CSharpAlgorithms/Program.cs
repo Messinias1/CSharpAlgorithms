@@ -17,7 +17,6 @@ class Solution
     {
         //Complete this method
         Node temp = new Node(data);
-        Node current = head;
         while (temp != null)
         {
             Console.Write(temp.data + " ");
