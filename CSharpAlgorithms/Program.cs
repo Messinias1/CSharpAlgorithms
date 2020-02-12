@@ -13,7 +13,9 @@ using System.Text;
 using System;
 
 namespace CSharpAlgorithms
-{
+{ 
+    // day 18 stack and queue 
+
     // day 17 ecpetion continued
 
     // day 16 exception string to int to own branch
