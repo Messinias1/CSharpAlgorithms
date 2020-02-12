@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 {
+    // day 15 linked list added to own branch
+
     // day 14 scope added to own branch
 
     //class MyBook : Book
