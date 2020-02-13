@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 21 generic methods complete
+
     // day 20 complete
 
     // day 19 interfaces
