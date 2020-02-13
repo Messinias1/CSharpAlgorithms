@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 20 complete
+
     // day 19 interfaces
 
     // day 18 stack and queue 
