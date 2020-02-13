@@ -1,40 +1,42 @@
 ﻿using System;
-public interface AdvancedArithmetic
-{
-    int divisorSum(int n);
-}
-
-public class Calculator : AdvancedArithmetic
-{
-    public int divisorSum(int n)
-    {
-        int result = 0;
-
-        for (int i = 2; i <= Math.Sqrt(n); i++)
-        {
-
-            if (n % i == 0)
-            {
-                if (i == (n / i))
-                    result += i;
-                else
-                    result += (i + n / i);
-            }
-        }
-        if (n == 1)
-            return n;
-
-        return (result + 1 + n);
-    }
-}
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 class Solution
 {
-    static void Main(string[] args)
+    static void Main(String[] args)
     {
-        int n = Int32.Parse(Console.ReadLine());
-        AdvancedArithmetic myCalculator = new Calculator();
-        int sum = myCalculator.divisorSum(n);
-        Console.WriteLine("I implemented: AdvancedArithmetic\n" + sum);
+        int n = Convert.ToInt32(Console.ReadLine());
+        string[] a_temp = Console.ReadLine().Split(' ');
+        int[] a = Array.ConvertAll(a_temp, Int32.Parse);
+        // Write Your Code Here
+        // Track number of elements swapped during a single array traversal
+        int numberOfSwaps = 0;
+        for (int i = 0; i < n; i++)
+        {
+
+            for (int j = 0; j < n - 1; j++)
+            {
+
+                // Swap adjacent elements if they are in decreasing order
+                if (a[j] > a[j + 1])
+                {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                    numberOfSwaps++;
+                }
+            }
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0)
+            {
+                break;
+            }
+        }
+        Console.WriteLine("Array is sorted in {0} swaps.", numberOfSwaps);
+        Console.WriteLine("First Element: {0}", a[0]);
+        Console.WriteLine("Last Element: {0}", a[a.Length - 1]);
     }
 }
+
