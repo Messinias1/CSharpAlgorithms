@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 22 binary search tree
+
     // day 21 generic methods complete
 
     // day 20 complete
