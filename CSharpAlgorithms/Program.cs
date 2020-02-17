@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 24 more linked list done
+
     // day 23 bst level order traversal
 
     // day 22 binary search tree
