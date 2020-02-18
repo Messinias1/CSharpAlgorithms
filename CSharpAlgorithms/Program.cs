@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // day 26 near solution
+
     // day 25 prime numbers 
 
     // day 24 more linked list done
