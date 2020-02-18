@@ -14,7 +14,7 @@ using System;
 
 namespace CSharpAlgorithms
 { 
-    // day 26 near solution
+    // day 26 nested logic complete
 
     // day 25 prime numbers 
 
