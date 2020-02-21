@@ -14,6 +14,8 @@ using System;
 
 namespace CSharpAlgorithms
 { 
+    // complete
+
     // day 29 bitwise complete
 
     // day 28 regex and database intro complete
